@@ -12,10 +12,11 @@ struct TreeNode{
 };
 class Solution {
 public:
-TreeNode* KthNode(TreeNode* pRoot, unsigned int k)
-{
+	TreeNode* KthNode(TreeNode* pRoot, unsigned int k)
+	{
 		TreeNode *p=pRoot;
-		if(p==NULL || k==0) return NULL;
+		TreeNode *resNode;
+		if(p==NULL || k==0)  return NULL;
 		stack<TreeNode *> st;
 		unsigned int count=0;
 		
@@ -28,15 +29,18 @@ TreeNode* KthNode(TreeNode* pRoot, unsigned int k)
 		}			
 		if(p == NULL)
 		{
-			p=st.top();  // 取当前节点
+			p=st.top();  // obtain the current node
 			count++;
-			if(count==k) return p;  
+			if(count==k)  resNode=p;  
 			st.pop();
 			p=p->right;
 		} 
 	}
-}  
+		return resNode;
+	}
 };
+
+// testing
 
 //       6
 //     /  \
