@@ -6,6 +6,9 @@ LeetCode - Solutions
 
 ## 重要通知
 
+C++版的leetcode题解已全部移动到:
+<https://github.com/yanglr/leetcode-ac/tree/master/cpp-leetcode>
+
 C#版的leetcode题解已全部移动到:
 <https://github.com/yanglr/leetcode-ac/tree/master/csharp-leetcode>
 
